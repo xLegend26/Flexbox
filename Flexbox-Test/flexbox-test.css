@@ -1,0 +1,28 @@
+a{
+    background-color: #4D7298;
+    border: 2px solid #77A6B6;
+    border-radius: .5em;
+    color: #fff;
+    padding: .5em;
+    display: inline-block;
+    text-decoration: none;  
+}
+.menubar_list{
+list-style-type: none;
+}
+
+li{
+    background-color: #4D7298;
+  border: 2px solid #77A6B6;
+  border-radius: .5em;
+  color: #fff;
+  padding: .5em;
+}
+body{
+    font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: black;
+}
+h1{
+    color: white;
+    text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

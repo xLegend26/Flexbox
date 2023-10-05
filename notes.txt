@@ -1,0 +1,41 @@
+<!--Please look at flexterms.png
+
+    The main axis is the axis running in the direction the flex items are laid out in (for example, as a row across the page, or a column down the page.) The start and end of this axis are called the main start and main end.
+    The cross axis is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the cross start and cross end.
+    The parent element that has display: flex set on it (the <section> in our example) is called the flex container.
+    The items laid out as flexible boxes inside the flex container are called flex items (the <article> elements in our example).
+
+-->
+
+Columns or Rows
+Flexbox provides a property called flex-direction that specifies which direction the main axis runs (which direction the flexbox children are laid out in).
+
+    By default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+
+
+flex-flow shorthanded
+At this point it's worth mentioning that a shorthanded exist for flex-direction and flex-wrap: flex-flow. So, for example:
+
+CSS:
+
+flex-direction: row;
+flex-wrap: wrap;
+
+with
+
+flex-flow: row wrap;
+
+
+flex:shorthand versus longhand
+flex is a shorthand property that can specify up to three different values:
+
+    The unitless proportion value we discussed above. This can be specified separately using the flex-grow longhand property.
+    A second unitless proportion value, flex-shrink, which comes into play when the flex items are overflowing their container. This value specifies how much an item will shrink in order to prevent overflow. This is quite an advanced flexbox feature and we won't be covering it any further in this article.
+    The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value.
+
+We'd advise against using the longhand flex properties unless you really have to (for example, to override something previously set). They lead to a lot of extra code being written, and they can be somewhat confusing.
+
+
+
+Nested flex boxes
+It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at complex-flexbox.html (see it live also).

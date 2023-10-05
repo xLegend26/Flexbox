@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Flexbox Practice 1</title>
+<style>
+
+    section{
+        display: flex;
+        /*To start with, we need to select which element are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element you want to effect. In this case we want to lay out the <article> elements, so we set this on the 
+            <section>
+            
+            This is cause the <section> element to become a flex container and ites children to become felx items. 
+            
+            */
+        
+            /*Flexbox provides a property called flex-direction that specifies which direction the main axis runs (which direction the flexbox children are laid out in). 
+            By default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+            
+            */
+        /*flex-direction: column;*/
+        /*You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.*/
+      }
+      html {
+        font-family: sans-serif;
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: purple;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+        background-color: black;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+        border-radius: 1%;
+        border-color: blue;
+        border-style: solid;
+        
+      }
+
+      /* Add your flexbox CSS below here */
+
+
+      
+    }
+
+</style>
+<!-- To be clear, let's reiterate what is happening here. The element we've given a display value of flex to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are laid out as flex items. 
+    Note also that you can use a display value of inline-flex if you wish to lay out an element's children as flex items, but have that element behave like an inline element. -->
+</head>
+<!--Please look at flexterms.png
+
+    The main axis is the axis running in the direction the flex items are laid out in (for example, as a row across the page, or a column down the page.) The start and end of this axis are called the main start and main end.
+    The cross axis is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the cross start and cross end.
+    The parent element that has display: flex set on it (the <section> in our example) is called the flex container.
+    The items laid out as flexible boxes inside the flex container are called flex items (the <article> elements in our example).
+
+-->
+
+<body>
+    <header>
+        <h1>Flexbox Examples Page</h1>
+      </header>
+
+    <section> <!-- the <section> tag defines a section in a document-->
+
+        <!--The <article> tag specifies independent, self contained content-->
+            <!--An article should make sense on its own and it sould be possible to distribute it independently fomr the rest of the site.-->
+            <article>
+                <h2>First article</h2>
+                <h4>containing info:</h4>
+        
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+              </article>
+        
+              <article>
+                <h2>Second article</h2>
+                <h4>containing info:</h4>
+        
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+              </article>
+        
+              <article>
+                <h2>Third article</h2>
+                <h4>containing info:</h4>
+        
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+        
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+              </article>
+
+    </section>
+
+
+</body>

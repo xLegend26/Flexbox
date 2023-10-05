@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Complex flexbox example</title>
+    <style>
+    
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: black;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      /* Add your flexbox CSS below here */
+
+      section {
+        display: flex;
+      }
+
+    /*Next, we set some flex values on the <article>s themselves. Take special note of the second rule here: we're setting the third <article> to have its children laid out like flex items too, but this time we're laying them out like a column.*/
+
+      article {
+        flex: 1 200px;
+        align-items: baseline;
+
+      }
+
+      article:nth-of-type(3) {
+        flex: 3 200px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around
+      }
+
+      article:nth-of-type(3) div:first-child {
+        /*Next, we select the first <div>. We first use flex: 1 100px; to effectively give it a minimum height of 100px, then we set its children (the <button> elements) to also be laid out like flex items. 
+            Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.*/
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+      }
+
+      article:nth-of-type(3) div:last-child {
+        /*Next, we select the first <div>. We first use flex: 1 100px; to effectively give it a minimum height of 100px, then we set its children (the <button> elements) to also be laid out like flex items. 
+            Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.*/
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+      }
+
+      button {
+        /*Finally, we set some sizing on the button. This time by giving it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. 
+            The buttons will take up as much space as they can. As many will fit on a line as is comfortable; beyond that, they'll drop to a new line*/
+        flex: 1 auto;
+        margin: 2px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Complex flexbox example</h1>
+    </header>
+
+    <!--The HTML for this is fairly simple. We've got a <section> element containing three <article>s. The third <article> contains three <div>s, and the first <div> contains five <button>s:-->
+    <section>
+      <article>
+        <h2>First article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Second article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <div>
+          <button>Smile</button>
+          <button>Laugh</button>
+          <button>Wink</button>
+          <button>Shrug</button>
+          <button>Blush</button>
+        </div>
+        <div>
+        <button>Smile</button>
+          <button>Laugh</button>
+          <button>Wink</button>
+          <button>Shrug</button>
+          <button>Blush</button>
+        </div>
+        <div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
